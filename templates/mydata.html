@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>My Data</title>
+    <style>
+        body {
+            background-image: url(https://www.wilko.com/assets/bWFzdGVyfGltYWdlc3wxOTQ5Mzd8aW1hZ2UvanBlZ3xpbWFnZXMvaGM3L2hmMi84ODIzMzczMzY1Mjc4LmpwZ3w5NDQ4NjNiOWVkYzdmNTlmYmNkNzcwYjAxOWFiMGQ5Y2JkNTM0ZWNhNjViYWZiYjIxMGUzOTkzOWExYTRmMTY0/0235704-1.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        h1 {
+            font-size: 45px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 20px;
+        }
+        h3 {
+            font-size: 25px;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Heart</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="http://localhost:5000/">Home</a>
+            <a class="nav-item nav-link" href="http://localhost:5000/dataset">Graphs</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Check your data
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="http://localhost:5000/login">Login</a>
+                    <a class="dropdown-item" href="http://localhost:5000/signup">Register</a>
+                </div>
+            </li>
+        </div>
+        </div>
+    </nav>
+    <h1>My Data</h1>
+    <hr>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Questions</th>
+            <th scope="col">Result</th>
+            <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <th scope="row">1</th>
+            <td><h2>Age:</h2></td>
+            <td><strong>{{ result.age }}</strong></td>
+            <td><img src="https://cdn.onlinewebfonts.com/svg/img_86026.png" height="30" width="35"></td>
+            </tr>
+            <tr>
+            <th scope="row">2</th>
+            <td><h2>Sex:</h2></td>
+            <td><strong>{{ result.sex }}</strong></td>
+            <td><img src="http://cdn.onlinewebfonts.com/svg/img_376388.png" height="30" width="35"></td>
+            </tr>
+            <tr>
+            <th scope="row">3</th>
+            <td><h2>Chest pain:</h2></td>
+            <td><strong>{{ result.cp }}</strong></td>
+            <td><img src="https://cdn2.iconfinder.com/data/icons/diseases-diabetes-heart-attack-1/50/38-512.png" height="30" width="35"></td>
+            </tr>
+            <tr>
+            <th scope="row">4</th>
+            <td><h2>Resting blood pressure:</h2></td>
+            <td><strong>{{ result.trestbps }}</strong></td>
+            <td><img src="https://cdn.onlinewebfonts.com/svg/img_266606.png" height="30" width="35"></td>
+            </tr>
+            <tr>
+            <th scope="row">5</th>
+            <td><h2>Serum cholestoral (mg/dl):</h2></td>
+            <td><strong>{{ result.chol }}</strong></td>
+            <td><img src="https://cdn4.iconfinder.com/data/icons/blood-work-glyphs/120/clogged_artery_cholesterol2-512.png" height="30" width="35"></td>
+            </tr>
+            <tr>
+            <th scope="row">6</th>
+            <td><h2>Fasting blood sugar (>120 mg/dl):</h2></td>
+            <td><strong>{{ result.fbs }}</strong></td>
+            <td><img src="https://static.thenounproject.com/png/16266-200.png" height="30" width="35"></td>
+            </tr>
+            <tr>
+            <th scope="row">7</th>
+            <td><h2>Resting electrocardiographic results:</h2></td>
+            <td><strong>{{ result.restecg }}</strong></td>
+            <td><img src="https://static.thenounproject.com/png/232773-200.png" height="30" width="35"></td>
+            </tr>
+            <tr>
+            <th scope="row">8</th>
+            <td><h2>Max heart rate:</h2></td>
+            <td><strong>{{ result.thalach }}</strong></td>
+            <td><img src="https://cdn4.iconfinder.com/data/icons/essentials-6/32/432-01-512.png" height="30" width="35"></td>
+            </tr>
+            <tr>
+            <th scope="row">9</th>
+            <td><h2>Exercise induced angina:</h2></td>
+            <td><strong>{{ result.exang }}</strong></td>
+            <td><img src="https://static.thenounproject.com/png/980172-200.png" height="30" width="35"></td>
+            </tr>
+            <tr>
+            <th scope="row">10</th>
+            <td><h2>ST depression induced by exercise relative to rest:</h2></td>
+            <td><strong>{{ result.oldpeak }}</strong></td>
+            <td><img src="https://www.freepngimg.com/thumb/gym_equipments/52372-3-exercise-picture-free-clipart-hd.png" height="30" width="35"></td>
+            </tr>
+            <tr>
+            <th scope="row">11</th>
+            <td><h2>Slope of the peak exercise ST segment:</h2></td>
+            <td><strong>{{ result.slope }}</strong></td>
+            <td><img src="http://landuselearning.com/wp-content/uploads/2015/03/iconmonstr-bar-chart-4-icon.png" height="30" width="35"></td>
+            </tr>
+            <tr>
+            <th scope="row">12</th>
+            <td><h2>No. major vessels colored by flourosopy:</h2></td>
+            <td><strong>{{ result.ca }}</strong></td>
+            <td><img src="https://cdn2.iconfinder.com/data/icons/health-care-33/500/health_-_outline_Heart2-512.png" height="30" width="35"></td>
+            </tr>
+            <th scope="row">13</th>
+            <td><h2>Thalassemia:</h2></td>
+            <td><strong>{{ result.thal }}</strong></td>
+            <td><img src="http://cdn.onlinewebfonts.com/svg/img_529437.png" height="30" width="35"></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <h3><td style="width: 150px" >PREDICTION: {{ result.PREDICTION }}</td></h3>
+
+    <h3><td style="width: 150px" >PROBABILITY: {{ result.PROB }}%</td></h3>
+
+    {% if result.PREDICTION == "You don't have a heart disease" %}
+    <h3><u>YOU ARE MOSTLY SAFE</u></h3>
+    {% else %}
+    <h3><u>YOU ARE NOT SAFE</u></h3>
+    {% endif %}
+
+    <hr>
+    <h3>Some Recommendations:</h3>
+    <h3>{{ cprec }}</h3>
+    <h3>{{ sloperec }}</h3>
+
+    <form action="http://localhost:5000/">
+        <p>
+            <input type="submit" class="btn btn-warning" value="Back Home"/>
+        </p>
+    </form>
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

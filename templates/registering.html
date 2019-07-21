@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Checking</title>
+    <style>
+        body {
+            background-image: url(https://www.wilko.com/assets/bWFzdGVyfGltYWdlc3wxOTQ5Mzd8aW1hZ2UvanBlZ3xpbWFnZXMvaGM3L2hmMi84ODIzMzczMzY1Mjc4LmpwZ3w5NDQ4NjNiOWVkYzdmNTlmYmNkNzcwYjAxOWFiMGQ5Y2JkNTM0ZWNhNjViYWZiYjIxMGUzOTkzOWExYTRmMTY0/0235704-1.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    </style>
+</head>
+<body style="margin: 30px">
+    <h2>See if you need help with these symptoms</h2>
+    <br>
+    <h3>Please fill in all the required informations</h3>
+    <form method="POST" action="http://localhost:5000/registering"
+    style="margin-left: 30px">
+    
+        <br>Email (Re-enter your email):
+        <input name="email" placeholder={{userRegMail}} type="email" style="width: 300px" required/>
+
+        <br><br>Age:
+        <input name="age" placeholder="Insert age..." type="number"
+        min="0" max="100" style="width: 100px" required/>
+
+        <br><br>Sex:
+        <select name="sex" required>
+            <option value="0">Female</option>
+            <option value="1">Male</option>
+            <option selected hidden></option>
+        </select>
+
+        <br><br>Chest Pain:
+        <select name="cp" required>
+            <option value="0">Typical angina</option>
+            <option value="1">Atypical angina</option>
+            <option value="2">Non-Anginal pain</option>
+            <option value="3">Asymptomatic</option>
+            <option selected hidden></option>
+        </select>
+
+        <br><br>Resting Blood Pressure:
+        <input name="trestbps" placeholder="Insert..." type="number"
+        min="0" style="width: 100px" required/>
+
+        <br><br>Serum Cholestoral(mg/dl):
+        <input name="chol" placeholder="Insert..." type="number"
+        min="0" style="width: 100px" required/>
+
+        <br><br>Fasting Blood Sugar > 120 mg/dl:
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="fbs" id="inlineRadio1" value="0" required>
+            <label class="form-check-label" for="inlineRadio1">No</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="fbs" id="inlineRadio2" value="1" required>
+            <label class="form-check-label" for="inlineRadio2">Yes</label>
+        </div>
+
+        <br><br>Resting Electrocardiographic:
+        <select name="restecg" required>
+            <option value="0">Normal</option>
+            <option value="1">ST-T wave abnormality</option>
+            <option value="2">Probable/definite left ventricular hypertrophy</option>
+            <option selected hidden></option>
+        </select>
+
+        <br><br>Max Heart Rate:
+        <input name="thalach" placeholder="Insert..." type="number"
+        min="0" style="width: 100px" required/>
+
+        <br><br>Exercise Induced Angina:
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="exang" id="inlineRadio3" value="0" required>
+            <label class="form-check-label" for="inlineRadio1">No</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="exang" id="inlineRadio4" value="1" required>
+            <label class="form-check-label" for="inlineRadio2">Yes</label>
+        </div>
+
+        <br><br>ST depression induced by exercise relative to rest:
+        <input name="oldpeak" placeholder="Insert..." type="number" step="any" style="width: 100px" required/>
+
+        <br><br>The slope of the peak exercise ST segment
+        <select name="slope" required>
+            <option value="0">Upsloping</option>
+            <option value="1">Flat</option>
+            <option value="2">Downsloping</option>
+            <option selected hidden></option>
+        </select>
+
+        <br><br>No. of major vessels colored by flourosopy
+        <select name="ca" required>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option selected hidden></option>
+        </select>
+
+        <br><br>Thalassemia 
+        <select name="thal" required>
+            <option value="1">Normal</option>
+            <option value="2">Fixed defect</option>
+            <option value="3">Reversable defect</option>
+            <option selected hidden></option>
+        </select>
+
+        <br><br>
+        <input type="submit">
+    </form>
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
